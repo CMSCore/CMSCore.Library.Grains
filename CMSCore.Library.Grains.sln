@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMSCore.Library.Grains", "CMSCore.Library.Grains\CMSCore.Library.Grains.csproj", "{465B1270-2408-44F4-8E9A-8A560F0FDE38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,7 +14,24 @@ Global
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|x64.Build.0 = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Debug|x86.Build.0 = Debug|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|x64.ActiveCfg = Release|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|x64.Build.0 = Release|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|x86.ActiveCfg = Release|Any CPU
+		{465B1270-2408-44F4-8E9A-8A560F0FDE38}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {754FA606-9D5C-457E-891C-EDE277745CD5}
 	EndGlobalSection
 EndGlobal
