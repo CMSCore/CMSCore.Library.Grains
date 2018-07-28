@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
     using GrainInterfaces;
     using Messages;
+    using Messages.Read;
     using Orleans;
     using Orleans.Concurrency;
     using Repository;
@@ -17,39 +18,46 @@
             _repository = repository;
         }
 
-        public async Task<FeedItemViewModel> GetFeedItem()
+        public async Task<Immutable<FeedItemViewModel>> GetFeedItem()
         {
-            return await _repository.GetFeedItem(this.GetPrimaryKeyString());
+            var result = await _repository.GetFeedItem(this.GetPrimaryKeyString());
+            return new Immutable<FeedItemViewModel>(result);
         }
 
-        public async Task<FeedItemViewModel> GetFeedItemByNormalizedName()
+        public async Task<Immutable<FeedItemViewModel>> GetFeedItemByNormalizedName()
         {
-            return await _repository.GetFeedItemByNormalizedName(this.GetPrimaryKeyString());
+            var result = await _repository.GetFeedItemByNormalizedName(this.GetPrimaryKeyString());
+            return new Immutable<FeedItemViewModel>(result);
         }
 
-        public async Task<PageViewModel> GetPageById()
+        public async Task<Immutable<PageViewModel>> GetPageById()
         {
-            return await _repository.GetPageById(this.GetPrimaryKeyString());
+            var result = await _repository.GetPageById(this.GetPrimaryKeyString());
+            return new Immutable<PageViewModel>(result);
         }
 
-        public async Task<PageViewModel> GetPageByNormalizedName()
+        public async Task<Immutable<PageViewModel>> GetPageByNormalizedName()
         {
-            return await _repository.GetPageByNormalizedName(this.GetPrimaryKeyString());
+            var result = await _repository.GetPageByNormalizedName(this.GetPrimaryKeyString());
+            return new Immutable<PageViewModel>(result);
         }
 
-        public async Task<IEnumerable<PageTreeViewModel>> GetPageTree()
+        public async Task<Immutable<PageTreeViewModel [ ]>> GetPageTree()
         {
-            return await _repository.GetPageTree();
+            var result = await _repository.GetPageTree();
+            return new Immutable<PageTreeViewModel [ ]>(result);
         }
 
-        public async Task<IEnumerable<TagViewModel>> GetTags()
-        { 
-            return await _repository.GetTags();
+        public async Task<Immutable<TagViewModel [ ]>> GetTags()
+        {
+            var result = await _repository.GetTags();
+            return new Immutable<TagViewModel [ ]>(result);
         }
 
-        public async Task<IEnumerable<UserViewModel>> GetUsers()
+        public async Task<Immutable<UserViewModel [ ]>> GetUsers()
         {
-            return await _repository.GetUsers();
+            var result = await _repository.GetUsers();
+            return new Immutable<UserViewModel [ ]>(result);
         }
     }
 }
