@@ -18,46 +18,46 @@
             _repository = repository;
         }
 
-        public async Task<Immutable<FeedItemViewModel>> GetFeedItem()
+        public async Task<FeedItemViewModel> GetFeedItem()
         {
             var result = await _repository.GetFeedItem(this.GetPrimaryKeyString());
-            return new Immutable<FeedItemViewModel>(result);
+            return result;
         }
 
-        public async Task<Immutable<FeedItemViewModel>> GetFeedItemByNormalizedName()
+        public async Task<FeedItemViewModel> GetFeedItemByNormalizedName()
         {
             var result = await _repository.GetFeedItemByNormalizedName(this.GetPrimaryKeyString());
-            return new Immutable<FeedItemViewModel>(result);
+            return result;
         }
 
-        public async Task<Immutable<PageViewModel>> GetPageById()
+        public async Task<PageViewModel> GetPageById()
         {
             var result = await _repository.GetPageById(this.GetPrimaryKeyString());
-            return new Immutable<PageViewModel>(result);
+            return result;
         }
 
-        public async Task<Immutable<PageViewModel>> GetPageByNormalizedName()
+        public async Task<PageViewModel> GetPageByNormalizedName()
         {
             var result = await _repository.GetPageByNormalizedName(this.GetPrimaryKeyString());
-            return new Immutable<PageViewModel>(result);
+            return result;
         }
 
-        public async Task<Immutable<PageTreeViewModel [ ]>> GetPageTree()
+        public async Task<List<PageTreeViewModel>> GetPageTree()
         {
             var result = await _repository.GetPageTree();
-            return new Immutable<PageTreeViewModel [ ]>(result);
+            return result;
         }
 
-        public async Task<Immutable<TagViewModel [ ]>> GetTags()
+        public async Task<List<TagViewModel>> GetTags()
         {
             var result = await _repository.GetTags();
-            return new Immutable<TagViewModel [ ]>(result);
+            return result;
         }
 
-        public async Task<Immutable<UserViewModel [ ]>> GetUsers()
+        public async Task<List<UserViewModel>> GetUsers()
         {
             var result = await _repository.GetUsers();
-            return new Immutable<UserViewModel [ ]>(result);
+            return result;
         }
     }
 }
